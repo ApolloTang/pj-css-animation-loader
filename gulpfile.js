@@ -168,7 +168,7 @@ connect.server({
 
 
 
-// gulp.task('default', ['js', 'jade', 'sass', 'watch', 'connect']);
-gulp.task('default', ['js', 'jade', 'less', 'watch', 'connect']);
+gulp.task('default', ['js', 'jade', 'sass', 'watch', 'connect']);
+//gulp.task('default', ['js', 'jade', 'less', 'watch', 'connect']);
 
 

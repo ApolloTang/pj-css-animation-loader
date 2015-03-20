@@ -1,77 +1,50 @@
-// $c1: #ececf5;
-// $c2: #f6f9fb;
-// $c3: #f4f5fa;
 
-$c1: red;
-$c2: blue;
-$c3: green;
+$t:transparent;
+
+$c1:#f4f5fa;
+$c2:#f6f9fb;
+
+$c3:#ececf5;
+$c4:#f2f3f9;
+
+$c5:#e7eaf4;
+$c6:#eef1f8;
+
+$c7:#b9bedd;
+$c8:#d0d5e8;
+
+$c9:#9fa6d2;
+$c10:#c0c5e1;
+
+$c11:#8490c6;
+$c12:#aeb5da;
+
 #facebook {
+    display: block;
     outline: 1px solid black;
-    width: 16px;
-    height: 16px;
-    // @include background-image(linear-gradient(90deg, #8490c6 1px, #aeb5da 0, #aeb5da 3px, #8490c6 3px));
+    width: 30px; height: 20px;
+    // width: 16px; height: 16px;
+
+    @include animation( wait 1s steps(1, start) infinite alternate);
     @include background-image(
-        linear-gradient(0deg, $c3 1px, transparent 0, transparent 15px, $c3 15px),
-        linear-gradient(90deg, $c3 1px, $c2 0, $c2, 3px, $c3 3px),
+            linear-gradient(0deg,  $c1 1px, $t   0, $t   8px,  $c1 8px),   /* 6  */
+            linear-gradient(90deg, $c1 1px, $c2  0, $c2  3px,  $c1 3px),
 
-        linear-gradient(0deg, $c1 1px, transparent 0, transparent 15px, $c1 15px),
-        linear-gradient(90deg, $c1 1px, $c2 0, $c2, 3px, $c1 3px),
+            linear-gradient(0deg,  $c3 1px, $t   0, $t   8px,  $c3 8px),   /* 5  */
+            linear-gradient(90deg, $c3 1px, $c4  0, $c4  3px,  $c3 3px),
 
-        linear-gradient(0deg, $c1 1px, transparent 0, transparent 15px, $c1 15px),
-        linear-gradient(90deg, $c1 1px, $c2 0, $c2, 3px, $c1 3px),
+            linear-gradient(0deg,  $c5 1px, $t   0, $t   8px,  $c5 8px),   /* 4  */
+            linear-gradient(90deg, $c5 1px, $c6  0, $c6  3px,  $c5 3px),
 
-        linear-gradient(0deg, $c1 1px, transparent 0, transparent 15px, $c1 15px),
-        linear-gradient(90deg, $c1 1px, $c2 0, $c2, 3px, $c1 3px),
+            linear-gradient(0deg,  $c7 1px, $t   0, $t   10px, $c7 10px),   /* 3  */
+            linear-gradient(90deg, $c7 1px, $c8  0, $c8  3px,  $c7 3px),
 
-        linear-gradient(0deg, $c1 1px, transparent 0, transparent 15px, $c1 15px),
-        linear-gradient(90deg, $c1 1px, $c2 0, $c2, 3px, $c1 3px) );
-    background-size:
-               4px 16px,  /* 5 */
-               4px 16px,
+            linear-gradient(0deg,  $c9 1px, $t   0, $t   15px, $c9 15px),   /* 2  */
+            linear-gradient(90deg, $c9 1px, $c10 0, $c10 3px,  $c9 3px),
 
-               4px 16px,  /* 4 */
-               4px 16px,
-
-               4px 16px,  /* 3 */
-               4px 16px,
-
-               4px 16px,  /* 2 */
-               4px 16px,
-
-               4px 16px,  /* 1 */
-               4px 16px;
-
-      background-position-x: 0px, 0px, 4px, 4px, 8px, 8px, 12px, 12px;/* Hide All */
-      background-position-y: 0px, 0px, 0px, 0px, 0px, 0px, 0px, 0px;
-    background-repeat: no-repeat;
-    /* Just to make it a little bigger*/
-    zoom: 5;
-}
-
-#loader {
-    zoom: 1; /* Increase this for a bigger symbol*/
-    width: 16px;
-    height: 16px;
-
-    background: linear-gradient(0deg, #f4f5fa 1px, transparent 0, transparent 8px, #f4f5fa 8px),   /* 6  */
-                linear-gradient(90deg, #f4f5fa 1px, #f6f9fb 0, #f6f9fb 3px, #f4f5fa 3px),
-
-                linear-gradient(0deg, #ececf5 1px, transparent 0, transparent 8px, #ececf5 8px),   /* 5  */
-                linear-gradient(90deg, #ececf5 1px, #f2f3f9 0, #f2f3f9 3px, #ececf5 3px),
-
-                linear-gradient(0deg, #e7eaf4 1px, transparent 0, transparent 8px, #e7eaf4 8px),   /* 4  */
-                linear-gradient(90deg, #e7eaf4 1px, #eef1f8 0, #eef1f8 3px, #e7eaf4 3px),
-
-                linear-gradient(0deg, #b9bedd 1px, transparent 0, transparent 10px, #b9bedd 10px), /* 3  */
-                linear-gradient(90deg, #b9bedd 1px, #d0d5e8 0, #d0d5e8 3px, #b9bedd 3px),
-
-                linear-gradient(0deg, #9fa6d2 1px, transparent 0, transparent 15px, #9fa6d2 15px), /* 2  */
-                linear-gradient(90deg, #9fa6d2 1px, #c0c5e1 0, #c0c5e1 3px, #9fa6d2 3px),
-
-                linear-gradient(0deg, #8490c6 1px, transparent 0, transparent 15px, #8490c6 15px), /* 1  */
-                 linear-gradient(90deg, #8490c6 1px, #aeb5da 0, #aeb5da 3px, #8490c6 3px);
-
-    background-repeat: no-repeat;
+            linear-gradient(0deg,  $c11 1px, $t   0, $t   15px, $c11 15px),   /* 1  */
+            linear-gradient(90deg, $c11 1px, $c12 0, $c12 3px,  $c11 3px)
+        );
 
     background-size:
                4px 9px,   /* 6 */
@@ -92,7 +65,58 @@ $c3: green;
                4px 16px,  /* 1 */
                4px 16px;
 
-  background-position-x: -4px; /* Hide All */
-  background-position-y: 3px, 3px, 3px, 3px, 3px, 3px, 2px, 2px, 0, 0, 0, 0;
+  background-position:  -4px 3px,
+                        -4px 3px,
+                        -4px 3px,
+                        -4px 3px,
+                        -4px 3px,
+                        -4px 3px,
+                        -4px 2px,
+                        -4px 2px,
+                        -4px 0,
+                        -4px 0,
+                        -4px 0,
+                        -4px 0;
+
+  // background-position:  0px  3px,
+  //                       0px  3px,
+  //                       5px  3px,
+  //                       5px  3px,
+  //                       10px 3px,
+  //                       10px 3px,
+  //                       15px 2px,
+  //                       15px 2px,
+  //                       20px 0,
+  //                       20px 0,
+  //                       25px 0,
+  //                       25px 0;
+
+    background-repeat: no-repeat;
+    zoom: 8;
 }
 
+// @include keyframes (wait) {
+//   12.5%{ background-position:   -4px,  -4px, -4px,  -4px, -4px,  -4px, -4px,  -4px, -4px,  -4px, 0 , 0 ; }
+//   25%{ background-position: -4px, -4px, -4px,  -4px, -4px,  -4px, -4px,  -4px, 0,  0, 6px,  6px; }
+//   37.5%{ background-position: -4px, -4px, -4px,  -4px, -4px,  -4px, 0, 0, 6px, 6px, 12px, 12px; }
+//   50%{ background-position: -4px,   -4px, -4px, -4px, 0, 0, 6px, 6px, 12px, 12px, -4px, -4px; }
+//   62.5%{ background-position: -4px, -4px, 0,  0, 6px,  6px, 12px,  12px, -4px,  -4px, -4px,  -4px; }
+//   75%{ background-position:    0, 0, 6px, 6px, 12px, 12px, -4px, -4px, -4px, -4px, -4px, -4px; }
+//   87.5%{ background-position: 6px, 6px, 12px, 12px, -4px, -4px, -4px, -4px, -4px, -4px, -4px, -4px; }
+//   100%{ background-position: 12px, 12px, -4px,  -4px, -4px,  -4px, -4px,  -4px, -4px,  -4px, -4px,  -4px; }
+// }
+
+@include keyframes (wait) {
+  12.5%{ background-position: -4px, -4px, -4px, -4px, -4px, -4px, -4px, -4px, -4px,  -4px,    0,     0; }
+    25%{ background-position: -4px, -4px, -4px, -4px, -4px, -4px, -4px, -4px,    0,     0,  6px,   6px; }
+  37.5%{ background-position: -4px, -4px, -4px, -4px, -4px, -4px,    0,    0,  6px,   6px, 12px,  12px; }
+    50%{ background-position: -4px, -4px, -4px, -4px,    0,    0,  6px,  6px, 12px,  12px, 18px,  18px; }
+  62.5%{ background-position: -4px, -4px,    0,    0,  6px,  6px, 12px, 12px, 18px,  18px, 24px,  24px; }
+    75%{ background-position:    0,    0,  6px,  6px, 12px, 12px, 18px, 18px, 24px,  24px, 30px,  30px; }
+  87.5%{ background-position:  6px,  6px, 12px, 12px, 18px, 18px, 24px, 24px, 30px,  30px, 36px,  36px; }
+   100%{ background-position: 12px, 12px, 18px, 18px, 24px, 24px, 30px, 30px, 36px,  36px, 42px,  42px; }
+}
+
+.wrapper{
+    text-align:center;
+}
